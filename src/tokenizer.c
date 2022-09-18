@@ -21,10 +21,9 @@ static char* tokens_type[] = {
     [BOOLEAN] = "BOOLEAN",
 };
 
-Token* new_token(TokenType type, char* content) 
+Token* new_token(TokenType type, const char* content) 
 {
     Token* token = malloc(sizeof(Token));
-    
     token->type = type;
     token->content = content ? calloc(strlen(content), sizeof(char)) : NULL;
 
