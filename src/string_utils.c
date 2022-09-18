@@ -33,3 +33,8 @@ char* string_to_upper(char* s)
 
     return s;
 }
+
+bool is_bool(char c)
+{
+    return c == '0' || c == '1';
+}

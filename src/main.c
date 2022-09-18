@@ -38,7 +38,7 @@ int main(void)
         }
 
         printf("expression: %s\n", expr);
-        boolean_algebra_evaluator(expr);
+        boolean_algebra_evaluator(expression);
     } while (true);
     
     return 0;
