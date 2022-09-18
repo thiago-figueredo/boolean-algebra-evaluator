@@ -1,8 +1,8 @@
 CC=gcc
 CFLAGS=-g -Wall -std=c99 -O2
 
-all: main
-	$(CC) $(CFLAGS) ./src/main.c ./src/tokenizer.c ./src/linked_list.c ./src/string_utils.c ./src/lexer.c -o main
+main: 
+	$(CC) $(CFLAGS) ./src/main.c ./src/tokenizer.c ./src/linked_list.c ./src/string_utils.c ./src/lexer.c -o ./src/main
 
 tokenizer: src/tokenizer
 	$(CC) $(CFLAGS) src/tokenizer.c ./src/linked_list.c ./src/string_utils.c -o src/tokenizer
@@ -17,4 +17,4 @@ lexer: src/lexer
 	$(CC) $(CFLAGS) ./src/lexer.c ./src/tokenizer.c -o lexer
 
 clean:
-	rm -f **/*.o **/.out **/main 
+	rm **/main
