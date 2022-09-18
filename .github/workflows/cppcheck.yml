@@ -9,6 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: see dirs and files
+        run: ls -la
+        
       - name: install cppcheck
         run: sudo apt-get install cppcheck
         
