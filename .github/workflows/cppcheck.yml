@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: cppcheck-action
-        uses: deep5050/cppcheck-action@v3.0
+      - uses: actions/checkout@v3
+
+      - name: install cppcheck
+        run: sudo apt-get install cppcheck
         
       - name: run cpp check
         run: cppcheck ./src
