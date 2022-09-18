@@ -14,6 +14,8 @@ typedef enum {
     VARIABLE,
     LEFT_PARENTHESIS,
     RIGHT_PARENTHESIS,
+    UNKNOWN,
+    BOOLEAN,
 } TokenType; 
 
 typedef struct {
@@ -21,7 +23,7 @@ typedef struct {
     char* content;
 } Token;
 
-Token* init_token(TokenType type, char* content);
+Token* new_token(TokenType type, char* content);
 LinkedList* tokenize(char* expression);
 void print_token(Token token);
 void print_tokens(LinkedList* tokens);
